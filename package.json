@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": " https://havrylchyk.github.io/Lab_1_Web/",
-  "scripts": {
+"scripts": {
   "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+  "build": "tsc && vite build",
+  "build:github": "GITHUB_PAGES=true tsc && vite build",
+  "predeploy": "npm run build:github",
+  "deploy": "gh-pages -d dist",
+  "preview": "vite preview"
 },
   "dependencies": {
     "@emotion/react": "^11.14.0",
