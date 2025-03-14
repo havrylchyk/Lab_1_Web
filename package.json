@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": " https://havrylchyk.github.io/Lab_1_Web/",
-"scripts": {
+  "scripts": {
   "dev": "vite",
   "build": "tsc && vite build",
-  "build:github": "GITHUB_PAGES=true tsc && vite build",
+  "build:github": "cross-env GITHUB_PAGES=true tsc && vite build",
   "predeploy": "npm run build:github",
   "deploy": "gh-pages -d dist",
   "preview": "vite preview"
@@ -25,6 +25,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
