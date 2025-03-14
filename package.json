@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": " https://havrylchyk.github.io/Lab_1_Web/",
-  "scripts": {
+"scripts": {
   "dev": "vite",
   "build": "tsc && vite build",
   "build:github": "cross-env GITHUB_PAGES=true tsc && vite build",
+  "build:netlify": "tsc && vite build",
   "predeploy": "npm run build:github",
   "deploy": "gh-pages -d dist",
   "preview": "vite preview"
