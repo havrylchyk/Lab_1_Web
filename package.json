@@ -7,8 +7,7 @@
 "scripts": {
   "dev": "vite",
   "build": "tsc && vite build",
-  "build:github": "cross-env GITHUB_PAGES=true tsc && vite build",
-  "build:netlify": "tsc && vite build",
+  "build:github": "tsc && vite build --config vite.github.config.ts",
   "predeploy": "npm run build:github",
   "deploy": "gh-pages -d dist",
   "preview": "vite preview"
